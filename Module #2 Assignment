@@ -1,0 +1,12 @@
+The corrected code for the Module #2 Assignment (via Canvas) is:
+myMean <- function(assignment2) {
+  return(sum(assignment2) / length(assignment2))
+}
+
+The orginal code:
+myMean <- function(assignment2) {
+  return(sum(assignment) / length(someData))
+}
+
+The orginal code does not work because of the variable names. The terms "assignment" and "someData" should be "assigment2" so R knows were to pull the data from.
+I have also updated my Word Press blog with the screenshots and an explanation of the corrected code.
