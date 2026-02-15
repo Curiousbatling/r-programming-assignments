@@ -1,0 +1,14 @@
+# Create matrices
+A <- matrix(1:100, nrow = 10)
+B <- matrix(1:1000, nrow = 10)
+
+# Determinants
+det_A <- det(A)
+det_B <- det(B)
+
+det_A
+det_B
+
+# Attempt inverses
+inv_A <- solve(A)
+inv_B <- solve(B)
