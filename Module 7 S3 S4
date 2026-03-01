@@ -1,0 +1,57 @@
+new_iris_s3 <- function(df, species = NULL) {
+  stopifnot(is.data.frame(df))
+  if (!all(c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species") %in% names(df))) {
+    stop("df must have the standard iris columns.")
+  }
+  if (!is.null(species)) {
+    df <- subset(df, Species %in% species)
+  }
+  structure(
+    list(data = df, n = nrow(df), species = unique(df$Species)),
+    class = "IrisS3"
+  )
+}
+
+iris_s3 <- new_iris_s3(iris, species = c("setosa", "versicolor"))
+iris_s3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+setClass(
+  "IrisS4",
+  slots = list(
+    data = "data.frame",
+    n = "numeric",
+    species = "factor"
+  ),
+  prototype = list(
+    data = iris,
+    n = nrow(iris),
+    species = iris$Species
+  ),
+  validity = function(object) {
+    needed <- c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species")
+    if (!all(needed %in% names(object@data))) {
+      return("data must contain standard iris columns.")
+    }
+    if (!is.factor(object@species)) return("species must be a factor.")
+    if (nrow(object@data) != object@n) return("n must equal nrow(data).")
+    TRUE
+  }
+)
