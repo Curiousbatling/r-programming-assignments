@@ -1,0 +1,38 @@
+
+library(plyr)
+
+
+raw <- read.table(
+  "C:\\Users\\Noctu\\Downloads\\Assignment 6 Dataset.txt",
+  header = TRUE,
+  sep = "\n",
+  stringsAsFactors = FALSE
+)
+
+
+split_rows <- strsplit(raw$Name.Age.Sex.Grade, ",")
+
+# Build cleaned dataset
+students <- data.frame(
+  Name  = sapply(split_rows, `[`, 1),
+  Age   = as.numeric(sapply(split_rows, `[`, 2)),
+  Sex   = sapply(split_rows, `[`, 3),
+  Grade = as.numeric(sapply(split_rows, `[`, 4))
+)
+
+
+students_gendered_mean <- ddply(
+  students,
+  "Sex",
+  summarise,
+  Grade_Average = mean(Grade, na.rm = TRUE)
+)
+
+write.table(
+  students_gendered_mean,
+  "C:\\Users\\Noctu\\Downloads\\Students_Gendered_Mean.txt",
+  row.names = FALSE
+)
+
+
+i_students 
