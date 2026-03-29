@@ -1,0 +1,59 @@
+#' Say Hello
+#'
+#' This function generates a friendly greeting.
+#'
+#' @param name A character string representing a name.
+#' @return A character string greeting the user.
+#' @export
+#'
+#' @examples
+#' say_hello("Raven")
+say_hello <- function(name) {
+  paste("Hello,", name, "!")
+}
+
+Package: myfirstpackage
+Title: My First R Package
+Version: 0.1.0
+Authors@R:
+    person("Raven", "Moon", email = "youremail@example.com", role = c("aut", "cre"))
+Description: A simple R package created for a class assignment demonstrating
+    basic package structure, function creation, and documentation.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+
+
+# myfirstpackage
+
+This R package was created as part of a class assignment to demonstrate basic
+R package development and GitHub integration.
+
+## Installation
+
+```r
+# install.packages("devtools")
+devtools::install_github("yourusername/myfirstpackage")
+
+library(myfirstpackage)
+say_hello("Raven")
+
+
+---
+
+## `.gitignore`
+
+```text
+.Rhistory
+.RData
+.Rproj.user
+
+
+
+
+
+library(devtools)
+document()
+check()
