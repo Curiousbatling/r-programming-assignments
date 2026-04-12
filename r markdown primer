@@ -1,0 +1,34 @@
+---
+title: "My R Markdown Primer"
+author: "Raven Moon"
+date: "April 12, 2026"
+output: html_document
+---
+
+## Introduction
+
+R Markdown is a powerful tool that allows users to combine narrative text, executable R code, and results into a single document. This approach helps create reports that are clear, reproducible, and easy to share.
+
+## What Is R Markdown?
+
+R Markdown uses simple Markdown syntax for formatting text while allowing R code to be embedded directly into the document. When the document is compiled, the R code is executed and the results are included automatically in the final output. This makes R Markdown especially useful for data analysis and reporting.
+
+## Math in R Markdown
+
+R Markdown supports LaTeX-style math expressions.
+
+Here is an example of **inline math**: the equation $E = mc^2$ is one of the most famous formulas in physics.
+
+Below is an example of a **displayed equation**:
+
+$$
+\alpha + \beta = \gamma
+$$
+
+## Loading a Dataset
+
+Below is an R code chunk that loads a built-in dataset called `mtcars` and displays the first few rows.
+
+```{r}
+data(mtcars)
+head(mtcars)
