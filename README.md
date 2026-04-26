@@ -1,25 +1,19 @@
-
 # crimeR
 
-<!-- badges: start -->
-<!-- badges: end -->
+`crimeR` is an R package for downloading and cleaning public crime data.
+The package provides simple tools to load crime data and standardize offense
+names so the data is ready for analysis.
 
-The goal of crimeR is to ...
+This package was created as a course project to demonstrate how R packages
+can be used to organize reusable data‑cleaning workflows.
+
+---
 
 ## Installation
 
-You can install the development version of crimeR like so:
+You can install the package directly from GitHub:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
+```r
+install.packages("devtools")
+devtools::install_github("YOUR_GITHUB_USERNAME/crimeR")
 library(crimeR)
-## basic example code
-```
-
