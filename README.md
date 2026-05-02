@@ -14,5 +14,5 @@ You can install the package directly from GitHub:
 
 ```r
 install.packages("devtools")
-devtools::install_github("YOUR_GITHUB_USERNAME/crimeR")
+devtools::install_github("curiousbatling/crimeR")
 library(crimeR)
