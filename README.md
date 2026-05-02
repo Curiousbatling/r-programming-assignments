@@ -4,8 +4,7 @@
 The package provides simple tools to load crime data and standardize offense
 names so the data is ready for analysis.
 
-This package was created as a course project to demonstrate how R packages
-can be used to organize reusable data‑cleaning workflows.
+This package was created as a course project.
 
 ---
 
